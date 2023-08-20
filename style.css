@@ -159,6 +159,13 @@ img{
   }
   .btn {
     padding: 10px 0;
-    font-size: 0.8rem ;
+    font-size: 0.7rem ;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .input {
+    width: 150px;
+    height: 75px;
   }
 }
