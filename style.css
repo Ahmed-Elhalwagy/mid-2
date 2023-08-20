@@ -10,7 +10,7 @@
 }
 
 body{
-  height: 100vh;
+  background: #2d2b2c;
 }
 
 .spacer {
@@ -21,11 +21,8 @@ body{
   background-size: cover;
 }
 
-.curve-green {
-  background-image: url('./curve.svg');
-}
-.curve-container {
-  height:15vh;
+.curve {
+  background: #000;
 }
 
 section {
@@ -34,6 +31,8 @@ section {
   align-items: center;
   flex-direction: column;
   gap: 60px;
+  height: 100%;
+  width: 100%;
 }
 
 section h1 {
@@ -66,7 +65,6 @@ section h1 {
   height: 100px;
   outline: none;
   padding: 0.7rem;
-  /* text-align: start; */
 }
 .input::placeholder{
   color: #2d2b2c;
@@ -96,8 +94,6 @@ section h1 {
  flex-direction: column;
  align-items: end;
  justify-content: start;
- height: 100%;
- gap: 20px;
  height: 100%;
 }
 
@@ -129,6 +125,40 @@ img{
   background: #1ba488;
 }
 
-@media screen {
-  
+
+@media only screen and (max-width: 1100px) {
+
+  .input {
+    width: 450px;
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .input {
+    width: 300px;
+    height: 100px;
+  }
+  .image-container{
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .input {
+    width: 200px;
+    height: 75px;
+  }
+  .image-container{
+    width: 150px;
+    height: 150px;
+  }
+  section h1 {
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 10px 0;
+    font-size: 0.8rem ;
+  }
 }
