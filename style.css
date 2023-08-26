@@ -43,26 +43,38 @@ section {
   margin-top: 10%;
 }
 
-section h1 {
-  font-size: 2rem;
-  font-weight: lighter;
-  color: #FFF;
-  border-bottom:5px solid #1ba488 ;
-}
-
 .title{
   display: flex;
   text-align: center;
   justify-content: center;
-  gap: 600px;
+  gap: 800px;
   align-items: center;
   width: 100%;
 }
 .title img {
   width: 50px;
 }
-.title h1{
+.title .content{
+  font-weight: lighter;
   position: absolute;
+  color: #FFF;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap:10px
+}
+
+.title .content h1 {
+  letter-spacing: 2px;
+  font-size: 2rem;
+  text-decoration: underline;
+  text-decoration-color: #1ba488;
+}
+
+.title .content span {
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: -3px -3px #1ba488;
 }
 
 .title img:nth-child(1) {
@@ -72,58 +84,24 @@ top: 30px;
 
 .main {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   gap: 30px;
-  padding: 0 100px;
+  padding: 0 10px;
 }
 
-.form-container form {
-  height: 100%;
-  width: 100%;
+.top {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: end;
-  gap: 30px;
-}
-
-
-.input {
   direction: rtl;
-  width: 600px;
-  height: 100px;
-  outline: none;
-  padding: 0.7rem;
-}
-.input::placeholder{
-  color: #2d2b2c;
-  opacity: 0.6;
-}
-.input:nth-child(1){
-  box-shadow: -5px -10px #2d2b2c, -5px -10px 0px 2px #1ba488;
-}
-.input:nth-child(2){
-  box-shadow: 5px 10px #2d2b2c, 5px 10px 0px 2px #1ba488;
-}
-.input:nth-child(3){
-  box-shadow: -5px 10px #2d2b2c, -5px 10px 0px 2px #1ba488;
-}
-.input:nth-child(4){
-  box-shadow: 5px 10px #2d2b2c, 5px 10px 0px 2px #1ba488;
-}
-
-.textarea {
-  height:200px;
-  width: 750px;
-  resize: none;
-}
-
-.left {
- display: flex;
- flex-direction: column;
- align-items: end;
- justify-content: start;
+  width: 100%;
+  gap: 30px;
+  text-align: center;
+  color: #FFF;
+  padding: 10px;
+  font-size: 1.2rem;
 }
 
 .image-container {
@@ -153,7 +131,6 @@ img{
 .btn:hover{
   background: #1ba488;
 }
-
 
 .btn-container {
   height: 70px;
@@ -188,95 +165,49 @@ img{
   background: #771d5b;
 }
 
-@media only screen and (max-width: 1400px) {
-
-  .input {
-    width: 450px;
-    height: 100px;
-  }
+@media only screen and (max-width: 750px) {
+.top {
+  font-size: 0.8rem;
 }
-
-@media only screen and (max-width: 1100px) {
-
-  .image-container{
-    width: 400px;
-    height: 400px;
-  } 
+.image-container {
+  width: 400px;
+  height: 400px;
 }
-
-@media only screen and (max-width: 850px) {
-  .input {
-    width: 300px;
-    height: 100px;
-  }
-  .image-container{
-    width: 200px;
-    height: 200px;
-  }
-  .btn-container .btn-back{
-    font-size: 0.8rem;
-  }
-  .btn {
-    padding: 10px 0;
-    /* font-size: 0.7rem ; */
-    width: 150px;
-  }
-  .title img {
-    width: 35px;
-  }
-  
-
+.title img {
+  width: 30px;
 }
-
-@media only screen and (max-width: 600px) {
-  .input {
-    width: 200px;
-    height: 75px;
-  }
-  .image-container{
-    width: 175px;
-    height: 150px;
-  }
-
+.title{
+  gap: 400px;
+}
+.title .content h1 {
+  font-size: 1rem;
+}
+.title .content span {
+  font-size: 2rem;
+}
+}
+@media only screen and (max-width: 450px) {
   section h1 {
     font-size: 1rem;
+    font-weight: lighter;
+    color: #FFF;
   }
-  .btn {
-    padding: 10px 0;
-    font-size: 0.7rem ;
-    width: 100px;
+
+  .image-container {
+    width: 300px;
+    height: 300px;
   }
-}
-
-@media only screen and (max-width: 600px) {
-  .input {
-    width: 150px;
-    height: 75px;
+  .title img {
+    width: 20px;
   }
-}
+  .title{
+    gap: 300px;
+  }
 
-.section-2 {
- margin-top: 8%;
-  height: 80vh;
-  width: 100%;
-  font-size: 0.8rem;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-.content {
-  text-align: center;
-  width: 100%;
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #FFF;
-  gap: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-@media only screen and (max-width: 800px) {
-.content {
-  font-size: 0.9rem;
-}
+  .title .content h1 {
+    font-size: 0.8rem;
+  }
+  .title .content span {
+    font-size: 2rem;
+  }
 }
